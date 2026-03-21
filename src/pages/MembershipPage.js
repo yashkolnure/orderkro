@@ -14,7 +14,7 @@ const MembershipPage = () => {
   // ✅ EFFECT: Show Popup after 4 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowPromoPopup(true);
+      setShowPromoPopup(false);
     }, 3500);
     return () => clearTimeout(timer);
   }, []);

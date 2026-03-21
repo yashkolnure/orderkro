@@ -209,7 +209,7 @@ const RegisterFreePage = () => {
             });
 
             if (verifyRes.data.success) {
-              await axios.post("/api/admin/restaurants/register", { 
+              await axios.post("/api/admin/restaurant/register", { 
                   ...payload, 
                   paymentStatus: 'paid', 
                   transactionId: response.razorpay_payment_id 

@@ -197,7 +197,7 @@ const RegisterFreePage = () => {
         key: process.env.REACT_APP_RAZORPAY_KEY_ID, 
         amount: data.amount,
         currency: "INR",
-        name: "Petoba Solutions",
+        name: "Orderkaro Solutions",
         description: `${pricingMap[formData.planType]?.name} (${formData.billingCycle})`,
         order_id: data.id,
         handler: async function (response) {

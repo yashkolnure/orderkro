@@ -293,14 +293,14 @@ function RestaurantMenuPagewp() {
             Restaurant Inactive
           </h2>
           <p className="text-gray-700 mb-4">
-            This restaurant is Disabled Connect to Petoba Team to Reactivate
+            This restaurant is Disabled Connect to Orderkaro Team to Reactivate
             your Menu.
           </p>
           <a href={`https://wa.me/919270361329?text=Reactivate%20Menu%20for%20Restaurant%20ID%3A%20${id}`} target="_blank" rel="noopener noreferrer" className="p-2 mt-4 border border-orange-600 rounded-xl text-orange-600 hover:underline font-semibold">
             Contact Support
           </a>
           <p className="text-gray-400 text-sm mt-4">
-            Powered By Petoba Digital QR Menu
+            Powered By Orderkaro Digital QR Menu
           </p>
         </div>
       </div>
@@ -310,10 +310,10 @@ function RestaurantMenuPagewp() {
   return (
     <>
       <Helmet>
-        <title>Petoba | Digital QR Menu & Ordering</title>
+        <title>Orderkaro | Digital QR Menu & Ordering</title>
         <meta
           name="description"
-          content="Petoba lets restaurants create digital QR menus. Customers scan, order, and enjoy a contactless dining experience."
+          content="Orderkaro lets restaurants create digital QR menus. Customers scan, order, and enjoy a contactless dining experience."
         />
 
         <link
@@ -325,7 +325,7 @@ function RestaurantMenuPagewp() {
           property="og:image"
           content="https://petoba.avenirya.com/wp-content/uploads/2025/09/Untitled-design-6.png"
         />
-        <meta property="og:title" content="Petoba - Digital QR Menu" />
+        <meta property="og:title" content="Orderkaro - Digital QR Menu" />
         <meta
           property="og:description"
           content="Turn your restaurant’s menu into a digital QR code menu."

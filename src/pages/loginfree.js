@@ -24,7 +24,7 @@ function Loginfree() {
 
   // --- PAGE TITLE MANAGEMENT ---
   useEffect(() => {
-    document.title = "Login | Petoba Admin";
+    document.title = "Login | Orderkaro Admin";
   }, []);
 
   // --- API HANDLERS (Real Backend) ---

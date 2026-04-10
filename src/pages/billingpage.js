@@ -10,10 +10,10 @@ function BillingApp() {
     <div className="relative min-h-screen">
       {/* SEO Meta Tags */}
       <Helmet>
-        <title>Petoba Billing App | Restaurant Billing Made Easy</title>
+        <title>Orderkaro Billing App | Restaurant Billing Made Easy</title>
         <meta
           name="description"
-          content="Manage restaurant orders, print KOTs, and generate invoices seamlessly using the Petoba Billing App. Simple, fast, and reliable billing for your restaurant."
+          content="Manage restaurant orders, print KOTs, and generate invoices seamlessly using the Orderkaro Billing App. Simple, fast, and reliable billing for your restaurant."
         />
         <link
           rel="icon"
@@ -24,7 +24,7 @@ function BillingApp() {
           property="og:image"
           content="https://petoba.avenirya.com/wp-content/uploads/2025/09/Untitled-design-6.png"
         />
-        <meta property="og:title" content="Petoba Billing App" />
+        <meta property="og:title" content="Orderkaro Billing App" />
         <meta
           property="og:description"
           content="A complete restaurant billing system with KOT printing, order tracking, and instant reporting."
@@ -42,10 +42,10 @@ function BillingApp() {
     {/* Left Side - Text & Buttons */}
     <div className="text-left">
       <h1 className="text-5xl font-bold text-gray-900 mb-6">
-        Petoba Billing App
+        Orderkaro Billing App
       </h1>
       <p className="text-gray-600 text-lg mb-8 leading-relaxed max-w-md">
-        Streamline your restaurant operations with Petoba Billing App.
+        Streamline your restaurant operations with Orderkaro Billing App.
         Manage orders, print KOTs, and generate invoices — all in one
         powerful and user-friendly app designed for restaurant owners.
       </p>
@@ -70,7 +70,7 @@ function BillingApp() {
     <div className="flex justify-center md:justify-end">
       <img
         src="https://avenirya.com/wp-content/uploads/2025/10/Blue-Modern-Money-Managing-Mobile-App-Promotion-Facebook-Ad-700-x-1120-px-700-x-900-px-1.png" // replace with your app preview
-        alt="Petoba Billing App Preview"
+        alt="Orderkaro Billing App Preview"
         className="rounded-3xl shadow-lg w-[90%] max-w-md object-contain"
       />
     </div>
@@ -95,7 +95,7 @@ function BillingApp() {
         { icon: "🗂️", title: "Daily/Weekly/Monthly Reports", desc: "Access organized sales reports anytime for better decision making." },
         { icon: "📱", title: "Multi-Device Support", desc: "Use the app seamlessly across multiple devices." },
         { icon: "🔔", title: "Instant Alerts for New Orders", desc: "Receive immediate notifications whenever a new order comes in." },
-        { icon: "🔗", title: "Easy Integration with Petoba Menu", desc: "Connect your digital menu directly for smooth billing." },
+        { icon: "🔗", title: "Easy Integration with Orderkaro Menu", desc: "Connect your digital menu directly for smooth billing." },
       ].map((feature, index) => (
         <div key={index} className="flex items-start gap-2 p-2 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-shadow">
           <div className="text-2xl">{feature.icon}</div>
@@ -121,7 +121,7 @@ function BillingApp() {
       <div className="text-5xl mb-4">📱</div>
       <h3 className="text-xl font-semibold mb-2">1. Download the App</h3>
       <p className="text-gray-600">
-        Install the Petoba Billing App from Play Store or our website.
+        Install the Orderkaro Billing App from Play Store or our website.
       </p>
     </div>
 
@@ -130,7 +130,7 @@ function BillingApp() {
       <div className="text-5xl mb-4">🔑</div>
       <h3 className="text-xl font-semibold mb-2">2. Login Securely</h3>
       <p className="text-gray-600">
-        Use your Petoba digital menu credentials to access your dashboard.
+        Use your Orderkaro digital menu credentials to access your dashboard.
       </p>
     </div>
 
@@ -224,7 +224,7 @@ function BillingApp() {
         <li>🗂️ Daily/Weekly/Monthly Reports</li>
          <li>📱 Multi-Device Support</li>
         <li>🔔 Instant Alerts for New Orders</li>
-        <li>🔗 Easy Integration with Petoba Menu</li>
+        <li>🔗 Easy Integration with Orderkaro Menu</li>
       </ul>
       <a
         href={WHATSAPP_LINK}
@@ -251,7 +251,7 @@ function BillingApp() {
         <li>🗂️ Daily/Weekly/Monthly Reports</li>
          <li>📱 Multi-Device Support</li>
         <li>🔔 Instant Alerts for New Orders</li>
-        <li>🔗 Easy Integration with Petoba Menu</li>
+        <li>🔗 Easy Integration with Orderkaro Menu</li>
       </ul>
       <a
         href={WHATSAPP_LINK}
@@ -278,7 +278,7 @@ function BillingApp() {
         <li>🗂️ Daily/Weekly/Monthly Reports</li>
          <li>📱 Multi-Device Support</li>
         <li>🔔 Instant Alerts for New Orders</li>
-        <li>🔗 Easy Integration with Petoba Menu</li>
+        <li>🔗 Easy Integration with Orderkaro Menu</li>
       </ul>
       <a
         href={WHATSAPP_LINK}

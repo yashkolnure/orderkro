@@ -12,7 +12,7 @@ const PHONE_NUMBER = "919270361329";
 
 // Helper for WhatsApp
 const getWhatsAppLink = () => {
-  const message = `Hello Petoba Team, I am interested in the PC/Desktop Billing Software.`;
+  const message = `Hello Orderkaro Team, I am interested in the PC/Desktop Billing Software.`;
   return `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
 };
 
@@ -33,7 +33,7 @@ export default function PetobaPCFeatures() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900">
       <Helmet>
-        <title>Petoba Desktop POS | Restaurant Billing for PC</title>
+        <title>Orderkaro Desktop POS | Restaurant Billing for PC</title>
         <meta name="description" content="Professional PC Billing Software for Restaurants. Keyboard shortcuts, USB Printer support, and large screen dashboard." />
       </Helmet>
 
@@ -167,7 +167,7 @@ export default function PetobaPCFeatures() {
               { icon: <Zap size={18}/>, label: "Platform", val: "Web Browser (Chrome / Edge Recommended)" },
               { icon: <Printer size={18}/>, label: "Printer Support", val: "USB Thermal, LAN/Wifi, Standard Laser" },
               { icon: <Cable size={18}/>, label: "Hardware Support", val: "Barcode Scanners, Cash Drawers" },
-              { icon: <Share2 size={18}/>, label: "Mobile Sync", val: "Syncs with Petoba Android App instantly" },
+              { icon: <Share2 size={18}/>, label: "Mobile Sync", val: "Syncs with Orderkaro Android App instantly" },
             ].map((item, idx) => (
               <div key={idx} className={`flex items-center justify-between p-5 bg-slate-50 hover:bg-white transition-colors ${idx !== 4 ? 'border-b border-slate-200' : ''}`}>
                 <div className="flex items-center gap-3 text-slate-600 font-medium">

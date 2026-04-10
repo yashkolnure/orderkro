@@ -163,7 +163,7 @@ const faqData = [
 ];
 
 const testimonials = [
-    { name: "Rahul S.", role: "Cafe Owner", text: "Since using Petoba, our table turnover increased by 30%. Customers love the WhatsApp integration!" },
+    { name: "Rahul S.", role: "Cafe Owner", text: "Since using OrderKaro, our table turnover increased by 30%. Customers love the WhatsApp integration!" },
     { name: "Priya M.", role: "Restaurant Manager", text: "The KOT printing is instant. No more shouting orders to the kitchen. It's so peaceful now." },
     { name: "Amit K.", role: "Food Court Owner", text: "Best decision for my fast food joint. The Google Review prompt has doubled our ratings." }
 ];
@@ -203,7 +203,7 @@ const HomePage = () => {
 
   const sendMessage = () => {
     if (!message.trim()) return;
-    const url = `https://wa.me/919270361329?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/916306869031?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
     setMessage("");
     setOpen(false);
@@ -212,7 +212,7 @@ const HomePage = () => {
   return (
     <div className="relative font-sans text-slate-800 selection:bg-orange-200 overflow-x-hidden">
       <Helmet>
-        <title>Petoba | Smart QR Menu & Billing POS</title>
+        <title>OrderKaro | Smart QR Menu & Billing POS</title>
         <meta name="description" content="The all-in-one restaurant OS. Turn scans into sales with our AI QR Menu and manage operations with our Fast Billing POS." />
       </Helmet>
       
@@ -270,6 +270,9 @@ const HomePage = () => {
             { icon: <Bot/>, label: "AI Waiter", desc: "Auto-Upsell" },
             { icon: <Printer/>, label: "KOT Print", desc: "Kitchen Sync" },
             { icon: <TrendingUp/>, label: "Reports", desc: "Live Analytics" },
+            { icon: <PlayCircle/>, label: "Stock Management", desc: "in Stock" },
+            { icon: <Bike/>, label: "Home Delivery", desc: "Live Tracking" },
+            { icon: <QrCode/>, label: "Table Order", desc: "Live Ordering" },
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-3 p-3 rounded-xl border border-slate-100 bg-white shadow-sm hover:border-orange-200 hover:shadow-md transition-all group cursor-default">
               <div className="mt-1 text-orange-500 group-hover:scale-110 transition-transform">
@@ -845,7 +848,7 @@ const HomePage = () => {
                      <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
                    </div>
                    <div>
-                     <h3 className="font-bold text-slate-900 text-sm">Petoba AI</h3>
+                     <h3 className="font-bold text-slate-900 text-sm">OrderKaro AI</h3>
                      <p className="text-[10px] text-green-600 font-medium flex items-center gap-1">
                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span> Online
                      </p>
@@ -1266,7 +1269,7 @@ const HomePage = () => {
             <div className="p-4 bg-slate-50">
               <textarea
                 rows={3}
-                placeholder="Hi, I want to know more about Petoba..."
+                placeholder="Hi, I want to know more about OrderKaro..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 className="w-full p-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-slate-700 text-sm bg-white resize-none"

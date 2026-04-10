@@ -1118,13 +1118,13 @@ const getAggregatedTableItems = (tableOrders) => {
         <div className="flex items-center gap-3 p-4">
             <img 
                 src={'https://i.ibb.co/8LFPyRfP/image-removebg-preview-4.png'} 
-                alt="Petoba Logo" 
+                alt="Orderkaro Logo" 
                 className="w-36 cursor-pointer hover:opacity-80 transition-opacity" 
                 onClick={() => {
                     navigate("/");        
                     setActiveTab("overview"); 
                 }}
-            />
+            />aFDGBN
         </div>
         <nav className="mt-0 flex flex-col gap-2 p-4">
           <SidebarItem id="tables" label="My Tables" icon={Grid} />

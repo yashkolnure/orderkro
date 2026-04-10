@@ -44,10 +44,10 @@ const AgencyLogin = () => {
   return (
     <div className="relative bg-white py-16 min-h-screen">
               <Helmet>
-        <title>Petoba | Digital QR Menu & Ordering</title>
+        <title>Orderkaro | Digital QR Menu & Ordering</title>
         <meta
           name="description"
-          content="Petoba lets restaurants create digital QR menus. Customers scan, order, and enjoy a contactless dining experience."
+          content="Orderkaro lets restaurants create digital QR menus. Customers scan, order, and enjoy a contactless dining experience."
         />
 
         <link
@@ -59,7 +59,7 @@ const AgencyLogin = () => {
           property="og:image"
           content="https://petoba.avenirya.com/wp-content/uploads/2025/09/Untitled-design-6.png"
         />
-        <meta property="og:title" content="Petoba - Agency Login" />
+        <meta property="og:title" content="Orderkaro - Agency Login" />
         <meta property="og:description" content="Turn your restaurant’s menu into a digital QR code menu." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://yash.avenirya.com" />

@@ -324,17 +324,17 @@ function RestaurantMenuPage() {
   return (
     <>
       <Helmet>
-        <title>Petoba | Digital QR Menu & Ordering</title>
+        <title>Orderkaro  | Digital QR Menu & Ordering</title>
         <meta
           name="description"
-          content="Petoba lets restaurants create digital QR menus. Customers scan, order, and enjoy a contactless dining experience."
+          content="Orderkaro  lets restaurants create digital QR menus. Customers scan, order, and enjoy a contactless dining experience."
         />
         <link
           rel="icon"
-          href="https://petoba.avenirya.com/wp-content/uploads/2025/09/download-1.png"
+          href="https://Orderkaro .avenirya.com/wp-content/uploads/2025/09/download-1.png"
           type="image/png"
         />
-        <meta property="og:title" content="Petoba - Digital QR Menu" />
+        <meta property="og:title" content="Orderkaro  - Digital QR Menu" />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -455,12 +455,12 @@ function RestaurantMenuPage() {
           <p className="text-gray-500 text-center mt-4">
             Made with ❤️ by{" "}
             <a
-              href="https://petoba.in"
+              href="https://Orderkaro.in"
               className="text-orange-500"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Petoba
+              Orderkaro 
             </a>
           </p>
         </div>

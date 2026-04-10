@@ -155,7 +155,7 @@ const AdvancedAIWaiterDemo = () => {
                   <div className="flex gap-2 items-center">
                     <div className="bg-slate-100 p-2 rounded-full"><ChevronLeft size={18} className="text-slate-800"/></div>
                     <div>
-                      <h2 className="font-bold text-lg text-slate-900 leading-none">Petoba Eats</h2>
+                      <h2 className="font-bold text-lg text-slate-900 leading-none">Orderkaro Eats</h2>
                       <p className="text-[10px] text-slate-500 font-medium mt-0.5">Table {TABLE_NUMBER} • {GUEST_NAME}</p>
                     </div>
                   </div>
@@ -239,7 +239,7 @@ const AdvancedAIWaiterDemo = () => {
                            <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-[2px] border-white rounded-full"></div>
                         </div>
                         <div>
-                           <h3 className="font-bold text-slate-900 text-sm">Petoba AI</h3>
+                           <h3 className="font-bold text-slate-900 text-sm">Orderkaro AI</h3>
                            <p className={`text-[10px] font-medium transition-colors duration-300 ${botStatus === 'Online' ? 'text-green-600' : 'text-indigo-500 animate-pulse'}`}>
                                {botStatus}
                            </p>
@@ -330,7 +330,7 @@ const AdvancedAIWaiterDemo = () => {
                                 type="text" 
                                 value={typedText}
                                 readOnly
-                                placeholder="Message Petoba AI..."
+                                placeholder="Message Orderkaro AI..."
                                 className="bg-transparent border-none focus:outline-none text-xs flex-1 text-slate-700 h-full font-medium"
                              />
                              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 ${typedText.length > 0 ? 'bg-indigo-600 scale-100 shadow-md shadow-indigo-200' : 'bg-slate-200 scale-90'}`}>

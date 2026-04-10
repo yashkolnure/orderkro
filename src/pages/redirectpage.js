@@ -65,7 +65,7 @@ function RedirectManagerPage() {
   return (
     <div className="min-h-screen flex flex-col items-center bg-gray-100 p-4">
       <Helmet>
-        <title>Petoba | Redirect Manager</title>
+        <title>Orderkaro | Redirect Manager</title>
         <meta name="description" content="Manage page redirects for your restaurant app." />
       </Helmet>
 

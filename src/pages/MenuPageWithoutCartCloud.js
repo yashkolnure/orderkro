@@ -285,7 +285,7 @@ function RestaurantMenuPageCloud() {
 
   return (
     <>
-      <Helmet><title>Petoba | Menu</title></Helmet>
+      <Helmet><title>Orderkaro | Menu</title></Helmet>
 
       {/* Header */}
       <header className="relative h-56 w-full mb-0 overflow-hidden rounded-b-xl shadow-lg">

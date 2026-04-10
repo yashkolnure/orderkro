@@ -26,37 +26,51 @@ const MembershipPage = () => {
   };
 
   // --- FEATURES ---
-  const qrFeatures = [
-    { name: "Unlimited Menu Items & Categories", available: true },
-    { name: "AI Menu Import (Upload PDF/Image)", available: true },
-    { name: "WhatsApp Ordering System", available: true },
-    { name: "Separate QRs: Dine-in & Bill Payment", available: true },
-    { name: "Takeaway QR (Ideal for Cloud Kitchens)", available: true },
-    { name: "Google Map Reviews Booster", available: true },
-    { name: "Offer Banners Manager", available: true },
-    { name: "Fast Billing / KOT Management", available: false },
-  ];
+  const tableFeatures = [
+  { name: "Digital Food Menu", available: true },
+  { name: "Unlimited Menu Items & Categories", available: true },
+  { name: "QR Code Table Ordering System", available: true },
+  { name: "Separate QR for Each Table", available: true },
+  { name: "Fast Billing / KOT Management", available: true },
+  { name: "AI Waiter Dish Suggestion", available: true },
+  { name: "Offer Banners Manager", available: true },
+  { name: "Out of Stock Control", available: true },
+  { name: "Customer Reviews", available: true },
+  { name: "Social Media Integration", available: true },
+  { name: "Restaurant Location", available: true },
+  { name: "Google Map Reviews Booster", available: true },
+];
 
-  const billingFeatures = [
-    { name: "Unlimited Menu Items", available: true },
-    { name: "Fast Billing POS (Desktop/Tab)", available: true },
-    { name: "Bluetooth Thermal Printing", available: true },
-    { name: "KOT (Kitchen Order Tickets)", available: true },
-    { name: "Table Management & Live Status", available: true },
-    { name: "Sales Reports & Analytics", available: true },
-    { name: "WhatsApp Customer Ordering", available: false },
-    { name: "Google Review Tools", available: false },
-  ];
+const homeFeatures = [
+  { name: "Digital Food Menu", available: true },
+  { name: "Unlimited Menu Items & Categories", available: true },
+  { name: "Takeaway QR (Cloud Kitchen)", available: true },
+  { name: "WhatsApp Ordering System", available: true },
+  { name: "Direct WhatsApp Order", available: true },
+  { name: "AI Menu Import (Upload PDF/Image)", available: true },
+  { name: "Offer Banners Manager", available: true },
+  { name: "Out of Stock Control", available: true },
+  { name: "Customer Reviews", available: true },
+  { name: "Social Media Integration", available: true },
+  { name: "Restaurant Location", available: true },
+  { name: "Google Map Reviews Booster", available: true },
+];
 
-  const comboFeatures = [
-    { name: "INCLUDES ALL QR Menu Features", available: true, bold: true },
-    { name: "INCLUDES ALL Billing App Features", available: true, bold: true },
-    { name: "Unified Dashboard (Single Login)", available: true },
-    { name: "Sync Menu (Update Price Everywhere)", available: true },
-    { name: "Inventory Management", available: true },
-    { name: "Staff/Waiter Login Access", available: true },
-    { name: "Priority Support", available: true },
-  ];
+const comboFeatures = [
+  { name: "Table QR Ordering System", available: true, bold: true },
+  { name: "Home Delivery / Takeaway System", available: true, bold: true },
+  { name: "WhatsApp Ordering Integration", available: true },
+  { name: "Separate QRs (Dine-in + Payment + Takeaway)", available: true },
+  { name: "Fast Billing / KOT Management", available: true },
+  { name: "AI Menu Import (PDF/Image Upload)", available: true },
+  { name: "AI Waiter Dish Suggestion", available: true },
+  { name: "Unlimited Menu Items & Categories", available: true },
+  { name: "Offers & Deals Manager", available: true },
+  { name: "Out of Stock Control", available: true },
+  { name: "Customer Reviews + Google Boost", available: true },
+  { name: "Social Media Integration", available: true },
+  { name: "Restaurant Location", available: true },
+];
 
   // --- CHRISTMAS PROMO POPUP COMPONENT ---
   const PromoPopup = ({ isOpen, onClose }) => {
@@ -275,60 +289,58 @@ const MembershipPage = () => {
               </span>
             </div>
           </div>
+<div className="grid grid-cols-1 mt-8 lg:grid-cols-3 gap-8 items-stretch mb-16">
 
-          {/* Pricing Grid */}
-          <div className="grid grid-cols-1 mt-8 lg:grid-cols-3 gap-8 items-stretch mb-16">
-            
-            {/* --- PLAN 1: QR MENU (Standard Pricing - Offer hidden) --- */}
-            <PricingCard
-              icon={<Smartphone className="w-6 h-6 text-blue-500" />}
-              title="QR Menu"
-              subtitle="Digital Presence"
-              // ✅ REVERTED TO STANDARD PRICING
-              originalPrice={billingCycle === "monthly" ? "₹499" : "₹1999"} 
-              price={billingCycle === "monthly" ? "₹199" : "₹899"}
-              period={billingCycle === "monthly" ? "/mo" : "/yr"}
-              features={qrFeatures}
-              buttonText="Select QR Plan"
-              buttonColor="bg-blue-600 hover:bg-blue-700"
-              // ✅ REVERTED TO STANDARD OFFER TEXT
-              offerText={billingCycle === "yearly" ? "🎁 Yearly Deal: Get 1 Month Billing App FREE" : ""}
-              redirect={getRegisterLink("qr")}
-            />
+  {/* TABLE ORDER SYSTEM */}
+  <PricingCard
+    icon={<LayoutDashboard className="w-6 h-6 text-blue-600" />}
+    title="Table Order System"
+    subtitle="For Dine-in Restaurants"
+    originalPrice="₹8000"
+    price="₹5000"
+    period="/yr"
+    features={tableFeatures}
+    buttonText="Get Table System"
+    buttonColor="bg-blue-600 hover:bg-blue-700"
+    redirect="https://wa.me/916306869031?text=Hello!%20I'm%20interested%20in%20the%20Table%20Order%20System.%20Please%20provide%20more%20details."
+  />
 
-            <div className="relative transform lg:-translate-y-6 z-20">
-              <div className="z-10 absolute -top-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-1.5 rounded-full text-sm font-bold shadow-lg flex items-center gap-1 whitespace-nowrap">
-                <Zap size={14} fill="currentColor" /> BEST VALUE COMBO
-              </div>
-              <PricingCard
-                icon={<LayoutDashboard className="w-6 h-6 text-orange-600" />}
-                title="Power Combo"
-                subtitle="Complete Restaurant OS"
-                originalPrice={billingCycle === "monthly" ? "₹999" : "₹4999"}
-                price={billingCycle === "monthly" ? "₹299" : "₹1499"}
-                period={billingCycle === "monthly" ? "/mo" : "/yr"}
-                description="Digital Menu + Billing POS. Perfect for Cloud Kitchens and Dine-in Restaurants."
-                features={comboFeatures}
-                buttonText="Get The Combo Deal"
-                buttonColor="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 shadow-orange-200"
-                highlight={true}
-                redirect={getRegisterLink("combo")}
-              />
-            </div>
+  {/* COMBO (HIGHLIGHTED) */}
+  <div className="relative transform lg:-translate-y-6 z-20">
+    <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-1.5 rounded-full text-sm font-bold shadow-lg">
+      🔥 BEST VALUE
+    </div>
 
-            <PricingCard
-              icon={<Printer className="w-6 h-6 text-purple-500" />}
-              title="Billing App"
-              subtitle="POS Operations"
-              originalPrice={billingCycle === "monthly" ? "₹499" : "₹1999"}
-              price={billingCycle === "monthly" ? "₹199" : "₹899"}
-              period={billingCycle === "monthly" ? "/mo" : "/yr"}
-              features={billingFeatures}
-              buttonText="Select Billing Plan"
-              buttonColor="bg-purple-600 hover:bg-purple-700"
-              redirect={getRegisterLink("billing")}
-            />
-          </div>
+    <PricingCard
+      icon={<Zap className="w-6 h-6 text-orange-600" />}
+      title="Power Combo"
+      subtitle="Complete Restaurant Solution"
+      originalPrice="₹12000"
+      price="₹8000"
+      period="/yr"
+      features={comboFeatures}
+      buttonText="Get Full System"
+      buttonColor="bg-gradient-to-r from-orange-500 to-red-600"
+      highlight={true}
+      redirect="https://wa.me/916306869031?text=Hello!%20I'm%20interested%20in%20the%20Power%20Combo.%20Please%20provide%20more%20details."
+    />
+  </div>
+
+  {/* HOME ORDER SYSTEM */}
+  <PricingCard
+    icon={<Smartphone className="w-6 h-6 text-green-600" />}
+    title="Home Order System"
+    subtitle="For Cloud Kitchen & Takeaway"
+    originalPrice="₹8000"
+    price="₹5000"
+    period="/yr"
+    features={homeFeatures}
+    buttonText="Get Home Ordering"
+    buttonColor="bg-green-600 hover:bg-green-700"
+    redirect="https://wa.me/916306869031?text=Hello!%20I'm%20interested%20in%20the%20Home%20Order%20System.%20Please%20provide%20more%20details."
+  />
+
+</div>
 
           {/* Dark Mode Promo */}
           <div className=" max-w-5xl mx-auto mt-20">

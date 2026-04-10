@@ -1,5 +1,7 @@
 import React from "react";
+
 import { Helmet } from "react-helmet";
+
 
 const AgencyPage = () => {
   const whatYouGet = [
@@ -71,10 +73,10 @@ const AgencyPage = () => {
   return (
     <div className="relative ">
               <Helmet>
-        <title>Petoba | Digital QR Menu & Ordering</title>
+        <title>Orderkaro | Digital QR Menu & Ordering</title>
         <meta
           name="description"
-          content="Petoba lets restaurants create digital QR menus. Customers scan, order, and enjoy a contactless dining experience."
+          content="Orderkaro lets restaurants create digital QR menus. Customers scan, order, and enjoy a contactless dining experience."
         />
 
         <link
@@ -86,7 +88,7 @@ const AgencyPage = () => {
           property="og:image"
           content="https://petoba.avenirya.com/wp-content/uploads/2025/09/Untitled-design-6.png"
         />
-        <meta property="og:title" content="Petoba - Digital QR Menu" />
+        <meta property="og:title" content="Orderkaro - Digital QR Menu" />
         <meta property="og:description" content="Turn your restaurant’s menu into a digital QR code menu." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://yash.avenirya.com" />

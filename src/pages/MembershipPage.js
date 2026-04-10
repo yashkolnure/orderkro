@@ -226,7 +226,7 @@ const comboFeatures = [
   return (
     <>
      <Helmet>
-        <title>Pricing - Petoba</title>
+        <title>Pricing - Orderkaro</title>
         <meta name="description" content="Affordable QR Menu and Billing Software plans." />
       </Helmet>
 
@@ -297,7 +297,7 @@ const comboFeatures = [
     title="Table Order System"
     subtitle="For Dine-in Restaurants"
     originalPrice="₹8000"
-    price="₹5000"
+    price="₹4999"
     period="/yr"
     features={tableFeatures}
     buttonText="Get Table System"
@@ -316,7 +316,7 @@ const comboFeatures = [
       title="Power Combo"
       subtitle="Complete Restaurant Solution"
       originalPrice="₹12000"
-      price="₹8000"
+      price="₹7999"
       period="/yr"
       features={comboFeatures}
       buttonText="Get Full System"
@@ -332,7 +332,7 @@ const comboFeatures = [
     title="Home Order System"
     subtitle="For Cloud Kitchen & Takeaway"
     originalPrice="₹8000"
-    price="₹5000"
+    price="₹4999"
     period="/yr"
     features={homeFeatures}
     buttonText="Get Home Ordering"

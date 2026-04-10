@@ -396,13 +396,13 @@ if (!isAuthenticated) {
     </a>
 
     {/* 3. Login */}
-    <button 
-      onClick={() => handleLoginAs(rest._id)} 
+    <a 
+      href={`/login`}
       className="p-2 text-purple-600 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors"
       title="Login as Restaurant"
     >
       <LogIn size={18} />
-    </button>
+    </a>
 
     {/* 4. Edit */}
     <button 

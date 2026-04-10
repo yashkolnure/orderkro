@@ -72,7 +72,7 @@ const Header = () => {
           <div className="flex items-center gap-2">
             <a href="/">
               <img
-                src="https://petoba.avenirya.com/wp-content/uploads/2022/07/Untitled-design-6.png"
+                src="https://i.ibb.co/8LFPyRfP/image-removebg-preview-4.png"
                 alt="Logo"
                 className="h-20 w-auto"
               />
@@ -83,12 +83,6 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-8">
             <a href="/" className="hover:text-blue-600 font-medium">
               Home
-            </a>
-            <a href="/portfolio" className="hover:text-blue-600 font-medium">
-              Portfolio
-            </a>
-            <a href="/agency" className="hover:text-blue-600 font-medium">
-              Agency
             </a>
             <a href="/membership" className="hover:text-blue-600 font-medium">
               Pricing
@@ -176,21 +170,11 @@ const Header = () => {
             Home
           </a>
           <a
-            href="/portfolio"
-            onClick={closeMenu}
-            className="hover:text-blue-600"
-          >
-            Portfolio
-          </a>
-          <a
             href="/membership"
             onClick={closeMenu}
             className="hover:text-blue-600"
           >
             Pricing
-          </a>
-          <a href="/agency" onClick={closeMenu} className="hover:text-blue-600">
-            Agency
           </a>
           <a
             href="/contact"

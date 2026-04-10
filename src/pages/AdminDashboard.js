@@ -1117,7 +1117,7 @@ const getAggregatedTableItems = (tableOrders) => {
       <aside className={`fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-xl transform transition-transform duration-300 lg:relative lg:translate-x-0 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}>
         <div className="flex items-center gap-3 p-4">
             <img 
-                src={'https://petoba.avenirya.com/wp-content/uploads/2022/07/Untitled-design-6.png'} 
+                src={'https://i.ibb.co/8LFPyRfP/image-removebg-preview-4.png'} 
                 alt="Petoba Logo" 
                 className="w-36 cursor-pointer hover:opacity-80 transition-opacity" 
                 onClick={() => {

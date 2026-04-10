@@ -31,9 +31,9 @@ const QRCodeTemplates = ({ restaurantId, membership_level }) => {
   const [previewTable, setPreviewTable] = useState(1);
 
   // URLs
-  const baseMenuURL = `https://petoba.in/menuwp/${restaurantId}`;
+  const baseMenuURL = `https://orderkaro.live/menuwp/${restaurantId}`;
   const getTableURL = (tableNum) => `${baseMenuURL}?table=${tableNum}`;
-  const deliveryQR = `https://petoba.in/cloudkitchen/${restaurantId}`;
+  const deliveryQR = `https://orderkaro.live/cloudkitchen/${restaurantId}`;
 
   // Logic: If Table System is ON, use specific table URL. Otherwise, use base URL.
   const currentPreviewURL = activeTab === 0 

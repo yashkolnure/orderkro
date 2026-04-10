@@ -34,7 +34,7 @@ function Loginfree() {
     setError(""); 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/admin/login", {
+      const res = await fetch("/api/admin/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -59,7 +59,7 @@ function Loginfree() {
     setError(""); 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/admin/request-otp", {
+      const res = await fetch("/api/admin/request-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -82,7 +82,7 @@ function Loginfree() {
     setError(""); 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/admin/verify-otp", {
+      const res = await fetch("/api/admin/verify-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp }),
@@ -113,7 +113,7 @@ function Loginfree() {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/admin/reset-password-final", {
+      const res = await fetch("/api/admin/reset-password-final", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, tempToken, newPassword }),

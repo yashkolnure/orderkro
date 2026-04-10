@@ -167,7 +167,7 @@ const RegisterFreePage = () => {
     if (Object.keys(newErrors).length > 0) return;
 
     try {
-      const checkRes = await axios.get(`http://localhost:5000/api/admin/restaurants/check-email?email=${formData.email}`);
+      const checkRes = await axios.get(`/api/admin/restaurants/check-email?email=${formData.email}`);
       if (checkRes.data.exists) {
         setErrors({ email: "An account with this email already exists." });
         return;
@@ -182,13 +182,13 @@ const RegisterFreePage = () => {
       };
 
       if (formData.planType === "trial" || payableAmount === 0) {
-        await axios.post("http://localhost:5000/api/admin/restaurant/register", { ...payload, paymentStatus: 'trial' });
+        await axios.post("/api/admin/restaurant/register", { ...payload, paymentStatus: 'trial' });
         setMessage("✅ Registered! 7-Day Trial Activated.");
         setTimeout(() => navigate("/login"), 1500);
         return;
       }
 
-      const { data } = await axios.post("http://localhost:5000/api/create-order", {
+      const { data } = await axios.post("/api/create-order", {
         amount: payableAmount,
         currency: "INR",
       });
@@ -202,14 +202,14 @@ const RegisterFreePage = () => {
         order_id: data.id,
         handler: async function (response) {
           try {
-            const verifyRes = await axios.post("http://localhost:5000/api/verify-payment", {
+            const verifyRes = await axios.post("/api/verify-payment", {
               razorpay_order_id: response.razorpay_order_id,
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_signature: response.razorpay_signature,
             });
 
             if (verifyRes.data.success) {
-              await axios.post("http://localhost:5000/api/admin/restaurant/register", { 
+              await axios.post("/api/admin/restaurant/register", { 
                   ...payload, 
                   paymentStatus: 'paid', 
                   transactionId: response.razorpay_payment_id 

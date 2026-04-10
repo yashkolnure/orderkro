@@ -25,7 +25,7 @@ const SuperAdminDashboard = () => {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 const [passwordInput, setPasswordInput] = useState("");
-const STATIC_PASSWORD = "admin123";
+const STATIC_PASSWORD = "OrderKaro@6363";
 
   // Form State
   const [formOpen, setFormOpen] = useState(false);

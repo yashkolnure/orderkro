@@ -23,6 +23,10 @@ const SuperAdminDashboard = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 100; 
 
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+const [passwordInput, setPasswordInput] = useState("");
+const STATIC_PASSWORD = "admin123";
+
   // Form State
   const [formOpen, setFormOpen] = useState(false);
   const [editingId, setEditingId] = useState(null);
@@ -38,7 +42,7 @@ const SuperAdminDashboard = () => {
   const [activeDropdown, setActiveDropdown] = useState({ id: null, type: null });
 
   // Config
-  const agencyId = localStorage.getItem("agencyId");
+  const agencyId = "64b8c9f1e1d3c9a1b2c3d4e"; // Example agency ID for filtering
   const limits = { 1: 10, 2: 25, 3: 10000 };
   const agencyLevel = parseInt(localStorage.getItem("agencyLevel") || "1", 10);
   const API = "/api/admin";
@@ -122,6 +126,14 @@ const SuperAdminDashboard = () => {
     } catch { toast.error("Update failed"); }
   };
 
+  const handleLogin = () => {
+  if (passwordInput === STATIC_PASSWORD) {
+    setIsAuthenticated(true);
+  } else {
+    toast.error("Wrong password");
+  }
+};
+
   const handleLoginAs = async (id) => {
     const agencyToken = localStorage.getItem("agencyToken");
     if (!agencyToken) return toast.error("Unauthorized");
@@ -203,8 +215,30 @@ const SuperAdminDashboard = () => {
     }).length
   };
 
-  if (!agencyId) return <div className=" flex items-center justify-center text-gray-500">Authentication Required</div>;
+if (!isAuthenticated) {
+  return (
+    <div className="flex items-center justify-center h-screen bg-gray-50">
+      <div className="bg-white p-6 rounded-xl shadow-md w-80">
+        <h2 className="text-lg font-bold mb-4 text-center">Enter Password</h2>
+        
+        <input
+          type="password"
+          placeholder="Enter password"
+          value={passwordInput}
+          onChange={(e) => setPasswordInput(e.target.value)}
+          className="w-full border px-3 py-2 rounded mb-3"
+        />
 
+        <button
+          onClick={handleLogin}
+          className="w-full bg-black text-white py-2 rounded"
+        >
+          Login
+        </button>
+      </div>
+    </div>
+  );
+}
   return (
     <div className="flex  bg-white font-sans text-gray-800">
       <Toaster position="top-right" toastOptions={{ style: { background: '#333', color: '#fff' } }} />

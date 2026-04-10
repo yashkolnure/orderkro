@@ -977,7 +977,7 @@ const startTour = () => {
                                 <div className="absolute top-0 right-0 w-20 h-20 bg-green-100 rounded-bl-full opacity-50"></div>
                                 <h3 className="text-gray-800 font-bold text-lg mb-2">Your Live Menu</h3>
                                 <p className="text-gray-500 text-sm mb-5">This is what your customers see when they scan the QR code.</p>
-                                <button onClick={() => window.open(`https://app.avenirya.com/menuwp/${restaurantId}`, "_blank")} className="w-full bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-800 transition shadow-lg font-medium flex items-center justify-center gap-2">
+                                <button onClick={() => window.open(`https://orderkaro.live/menuwp/${restaurantId}`, "_blank")} className="w-full bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-800 transition shadow-lg font-medium flex items-center justify-center gap-2">
                                     <span>View Customer Menu</span>
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                                 </button>

@@ -291,7 +291,7 @@ const HomePage = () => {
           <a href="/membership" className="px-8 py-4 bg-slate-900 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center gap-2">
             Start Free Trial <ArrowRight size={18} />
           </a>
-          <a href="https://petoba.in/mymenu/68951632dce5299231f16e7d" className="px-8 py-4 bg-slate-900 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center gap-2">
+          <a href="https://orderkaro.live/menuwp/69d89c04790c4dc184dee3be" className="px-8 py-4 bg-slate-900 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center gap-2">
           <PlayCircle size={18} className="text-orange-500"/>  View Demo 
           </a>
          

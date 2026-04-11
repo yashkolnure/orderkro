@@ -689,7 +689,7 @@ const startTour = () => {
             {/* WhatsApp Button */}
             <button 
                 onClick={() => {
-                    window.open("https://wa.me/919270361329?text=Hi,%20I%20want%20to%20activate%20the%20Billing%20App%20Plan.", "_blank");
+                    window.open("https://wa.me/916306869031?text=Hi,%20I%20want%20to%20activate%20the%20Billing%20App%20Plan.", "_blank");
                     setShowBillingAlert(false);
                 }} 
                 className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-green-100 transition-all flex items-center justify-center gap-2"

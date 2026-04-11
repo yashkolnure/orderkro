@@ -65,16 +65,13 @@ function RestaurantMenuPagewp() {
   </div>
 );
 
-  // 3. NEW REDIRECTION LOGIC
-  // This runs whenever restaurantDetails updates.
-  useEffect(() => {
-    // Check if restaurant details are loaded and if orderMode is 'billing'
-    if (restaurantDetails?.billing === 'true' && restaurantDetails?.orderMode === 'billing') {
-      // Use replace: true so the user can't click 'back' to return to the redirecting page
-      // Ensure the billing app route is correct. Assuming it's /restaurant/:id based on previous context.
-      navigate(`/restaurant/${id}${location.search}`, { replace: true });
-    }
-  }, [restaurantDetails, navigate, location.search, id]);
+
+useEffect(() => {
+  // Add optional chaining (?.) to prevent reading from null
+  if (restaurantDetails?.billing === 'true' && restaurantDetails?.orderMode === 'billing') {
+    navigate(`/restaurant/${id}${location.search}`, { replace: true });
+  }
+}, [restaurantDetails, navigate, location.search, id]);
 
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 300);
@@ -92,7 +89,7 @@ function RestaurantMenuPagewp() {
       try {
         const token = localStorage.getItem("token");
         // Ensure API URL is correct
-        const res = await fetch(`/api/admin/${id}/offers`, {
+        const res = await fetch(`https://orderkaro.live/api/admin/${id}/offers`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -114,10 +111,10 @@ function RestaurantMenuPagewp() {
         const token = localStorage.getItem("token");
 
         const [menuRes, detailsRes] = await Promise.all([
-          fetch(`/api/admin/${id}/menu`, {
+          fetch(`https://orderkaro.live/api/admin/${id}/menu`, {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          fetch(`/api/admin/${id}/details`, {
+          fetch(`https://orderkaro.live/api/admin/${id}/details`, {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);
@@ -275,7 +272,7 @@ function RestaurantMenuPagewp() {
   };
 
   // 4. PREVENT FLASHING: If orderMode is 'billing', return null (or a spinner) while redirecting
-  if (restaurantDetails?.orderMode === 'billing') {
+  if (restaurantDetails?.billing === 'true' && restaurantDetails?.orderMode === 'billing') {
     return (
       <div className="flex justify-center items-center h-screen bg-gray-100">
         <div className="w-10 h-10 border-4 border-orange-500 border-t-transparent rounded-full animate-spin" />

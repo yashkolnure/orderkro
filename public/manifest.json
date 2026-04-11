@@ -1,7 +1,7 @@
 {
-  "short_name": "Petoba",
-  "name": "Petoba - Restaurant QR Menu & Billing",
-  "description": "Petoba is the all-in-one SaaS for restaurants. Digital QR Menu, Billing Software, and Contactless Ordering System.",
+  "short_name": "Orderkaro",
+  "name": "Orderkaro - Restaurant QR Menu & Billing",
+  "description": "Orderkaro is the all-in-one SaaS for restaurants. Digital QR Menu, Billing Software, and Contactless Ordering System.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -27,5 +27,5 @@
   "theme_color": "#FF5722",
   "background_color": "#ffffff",
   "categories": ["business", "food", "productivity"],
-  "id": "petoba-app"
+  "id": "Orderkaro-app"
 }

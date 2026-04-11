@@ -361,7 +361,7 @@ function RestaurantMenuPage() {
             placeholder="Search for a dish..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full max-w-md px-4 py-2 rounded-xl text-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 bg-white shadow"
+            className="w-full max-w-md px-4 py-2 rounded-xl text-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white shadow"
           />
         </div>
       </header>
@@ -401,7 +401,7 @@ function RestaurantMenuPage() {
               <span
                 key={idx}
                 className={`block w-2 h-2 rounded-full transition-all ${
-                  idx === activeOffer ? "bg-orange-600" : "bg-gray-300"
+                  idx === activeOffer ? "bg-green-600" : "bg-gray-300"
                 }`}
               />
             ))}
@@ -417,7 +417,7 @@ function RestaurantMenuPage() {
                 key={cat}
                 onClick={() => setCategory(cat)}
                 className={`px-4 py-2 rounded-xl whitespace-nowrap ${
-                  category === cat ? "bg-orange-500 text-white" : "bg-white text-gray-700 border"
+                  category === cat ? "bg-green-500 text-white" : "bg-white text-gray-700 border"
                 }`}
               >
                 {cat}
@@ -456,7 +456,7 @@ function RestaurantMenuPage() {
             Made with ❤️ by{" "}
             <a
               href="https://Orderkaro.in"
-              className="text-orange-500"
+              className="text-green-500"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -473,7 +473,7 @@ function RestaurantMenuPage() {
 
       <button
         onClick={() => setShowCart(true)}
-        className="fixed bottom-5 right-5 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg text-lg z-50 flex items-center gap-2"
+        className="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full shadow-lg text-lg z-50 flex items-center gap-2"
       >
         Cart {cart.length > 0 && <span>{cart.length}</span>}
       </button>
@@ -517,19 +517,19 @@ function RestaurantMenuPage() {
             <div key={item._id} className="flex items-center justify-between group">
               <div className="flex-1 pr-4">
                 <h4 className="font-bold text-gray-800 text-lg">{item.name}</h4>
-                <p className="text-orange-600 font-semibold">{currencySymbol}{item.price}</p>
+                <p className="text-green-600 font-semibold">{currencySymbol}{item.price}</p>
               </div>
               
               <div className="flex items-center bg-gray-100 rounded-xl p-1 border border-gray-200">
                 <button 
-                  className="w-8 h-8 flex items-center justify-center bg-white rounded-lg shadow-sm font-bold text-gray-600 hover:text-orange-500 active:scale-90 transition-all"
+                  className="w-8 h-8 flex items-center justify-center bg-white rounded-lg shadow-sm font-bold text-gray-600 hover:text-green-500 active:scale-90 transition-all"
                   onClick={() => decreaseQty(item._id)}
                 >
                   -
                 </button>
                 <span className="w-10 text-center font-bold text-gray-800">{item.quantity}</span>
                 <button 
-                  className="w-8 h-8 flex items-center justify-center bg-white rounded-lg shadow-sm font-bold text-gray-600 hover:text-orange-500 active:scale-90 transition-all"
+                  className="w-8 h-8 flex items-center justify-center bg-white rounded-lg shadow-sm font-bold text-gray-600 hover:text-green-500 active:scale-90 transition-all"
                   onClick={() => increaseQty(item._id)}
                 >
                   +
@@ -576,7 +576,7 @@ function RestaurantMenuPage() {
                   setShowModal(true);
                 }
               }}
-              className="flex-[2] py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-2xl font-black text-lg shadow-lg shadow-orange-200 hover:shadow-orange-300 transition-all active:scale-95"
+              className="flex-[2] py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-2xl font-black text-lg shadow-lg shadow-green-200 hover:shadow-green-300 transition-all active:scale-95"
             >
               Place Order
             </button>
@@ -608,7 +608,7 @@ function RestaurantMenuPage() {
               placeholder="e.g., 5"
               // Disable editing if it came from the URL (optional)
               disabled={!!tableFromURL} 
-              className={`w-full px-4 py-3 border border-gray-300 rounded-xl text-lg focus:outline-none focus:ring-2 focus:ring-orange-500 mb-6 ${
+              className={`w-full px-4 py-3 border border-gray-300 rounded-xl text-lg focus:outline-none focus:ring-2 focus:ring-green-500 mb-6 ${
                 tableFromURL ? "bg-gray-100 text-gray-500 cursor-not-allowed" : ""
               }`}
             />
@@ -640,7 +640,7 @@ function RestaurantMenuPage() {
                 className={`w-1/2 py-3 rounded-xl font-semibold text-white transition ${
                     restaurantDetails?.isLive === false 
                     ? "bg-gray-400 cursor-not-allowed" 
-                    : "bg-orange-500 hover:bg-orange-600"
+                    : "bg-green-500 hover:bg-green-600"
                 }`}
               >
                 Submit
@@ -656,7 +656,7 @@ function RestaurantMenuPage() {
             if(tableNumber) fetchOrdersForTable(tableNumber); // Refresh on click
             setShowMyOrders(true);
           }}
-          className="fixed bottom-5 left-24 bg-orange-500 text-white border-2 border-orange-500 px-4 py-3 rounded-full shadow-lg text-lg z-40 flex items-center gap-2 hover:bg-orange-600"
+          className="fixed bottom-5 left-24 bg-green-500 text-white border-2 border-green-500 px-4 py-3 rounded-full shadow-lg text-lg z-40 flex items-center gap-2 hover:bg-green-600"
         >
           🧾 
         </button>
@@ -667,10 +667,10 @@ function RestaurantMenuPage() {
           <div className="bg-white rounded-2xl shadow-2xl w-[95%] max-w-md h-[85vh] flex flex-col animate-in fade-in zoom-in duration-200 overflow-hidden">
             
             {/* Header */}
-            <div className="bg-orange-600 p-4 flex justify-between items-center text-white shadow-md">
+            <div className="bg-green-600 p-4 flex justify-between items-center text-white shadow-md">
                 <div>
                     <h2 className="text-xl font-bold flex items-center gap-2">Table {tableNumber || "?"}</h2>
-                    <p className="text-xs text-orange-100 opacity-80">Order History</p>
+                    <p className="text-xs text-green-100 opacity-80">Order History</p>
                 </div>
                 <button onClick={() => setShowMyOrders(false)} className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition">✕</button>
             </div>
@@ -678,7 +678,7 @@ function RestaurantMenuPage() {
             {/* List */}
             <div className="flex-1 overflow-y-auto p-4 bg-gray-50">
                 {isLoadingOrders ? (
-                      <div className="flex justify-center mt-10"><div className="w-8 h-8 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div></div>
+                      <div className="flex justify-center mt-10"><div className="w-8 h-8 border-4 border-green-500 border-t-transparent rounded-full animate-spin"></div></div>
                 ) : myOrders.length === 0 ? (
                     <div className="text-center mt-10 text-gray-400">
                         <p className="text-4xl mb-2">🍽️</p>
@@ -688,7 +688,7 @@ function RestaurantMenuPage() {
                     myOrders.map((order, index) => (
                         <div key={index} className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 mb-4 relative overflow-hidden">
                             {/* Status Strip */}
-                            <div className={`absolute left-0 top-0 bottom-0 w-1.5 ${order.status === 'completed' ? 'bg-green-500' : 'bg-orange-400'}`}></div>
+                            <div className={`absolute left-0 top-0 bottom-0 w-1.5 ${order.status === 'completed' ? 'bg-green-500' : 'bg-green-400'}`}></div>
                             
                             <div className="flex justify-between items-start mb-3 pl-2">
                                 <div>
@@ -697,7 +697,7 @@ function RestaurantMenuPage() {
                                     </span>
                                     <h4 className="font-bold text-gray-800 text-sm">Order #{myOrders.length - index}</h4>
                                 </div>
-                                <span className={`px-2 py-1 rounded text-xs font-bold capitalize ${order.status === 'completed' ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'}`}>
+                                <span className={`px-2 py-1 rounded text-xs font-bold capitalize ${order.status === 'completed' ? 'bg-green-100 text-green-700' : 'bg-green-100 text-green-700'}`}>
                                     {order.status || 'Received'}
                                 </span>
                             </div>

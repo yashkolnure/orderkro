@@ -66,8 +66,8 @@ if (quantity === 0) {
           onClick={(e) => handleStopProp(e, addToCart)}
           className={
             isPopup
-              ? "flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-2 rounded-full transition w-full"
-              : "flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm px-3 py-1.5 rounded-xl transition"
+              ? "flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2 rounded-full transition w-full"
+              : "flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white text-sm px-3 py-1.5 rounded-xl transition"
           }
         >
           <FaPlus className={isPopup ? "text-sm" : "text-xs"} />
@@ -83,14 +83,14 @@ if (quantity === 0) {
       <div
         className={
           isPopup
-            ? "flex items-center justify-center gap-3 bg-green-500 text-white font-semibold px-5 py-2 rounded-full transition w-full"
-            : "flex items-center gap-2 bg-green-500 text-white rounded-xl px-2 py-1.5"
+            ? "flex items-center justify-center gap-3 bg-orange-500 text-white font-semibold px-5 py-2 rounded-full transition w-full"
+            : "flex items-center gap-2 bg-orange-500 text-white rounded-xl px-2 py-1.5"
         }
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={(e) => handleStopProp(e, decreaseQty)}
-          className="p-1 rounded-full hover:bg-green-600 transition"
+          className="p-1 rounded-full hover:bg-orange-600 transition"
         >
           <FaMinus className={isPopup ? "text-sm" : "text-xs"} />
         </button>
@@ -105,7 +105,7 @@ if (quantity === 0) {
         </span>
         <button
           onClick={(e) => handleStopProp(e, increaseQty)}
-          className="p-1 rounded-full hover:bg-green-600 transition"
+          className="p-1 rounded-full hover:bg-orange-600 transition"
         >
           <FaPlus className={isPopup ? "text-sm" : "text-xs"} />
         </button>
@@ -150,7 +150,7 @@ if (quantity === 0) {
           </div>
 
           <div className="flex justify-between items-center mt-2">
-            <span className="text-green-500 font-semibold text-base">
+            <span className="text-orange-500 font-semibold text-base">
               {currencySymbol} {convertedPrice}
             </span>
             {renderCartControls(false)}
@@ -180,7 +180,7 @@ if (quantity === 0) {
                 {item.name}
               </h3>
               <p className="text-gray-600 text-sm mb-4">{item.description}</p>
-              <p className="text-green-500 font-semibold text-lg mb-4">
+              <p className="text-orange-500 font-semibold text-lg mb-4">
                 {currencySymbol} {convertedPrice}
               </p>
 

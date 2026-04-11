@@ -47,11 +47,11 @@ function MenuCard({ item, addToCart }) {
         </div>
 
         <div className="flex justify-between items-center mt-2">
-          <span className="text-green-500 font-semibold text-base">₹ {item.price}</span>
+          <span className="text-orange-500 font-semibold text-base">₹ {item.price}</span>
           {addToCart && (
             <button
               onClick={() => addToCart(item)}
-              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm px-3 py-1.5 rounded-xl transition"
+              className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white text-sm px-3 py-1.5 rounded-xl transition"
             >
               <FaPlus className="text-xs" /> Add
             </button>

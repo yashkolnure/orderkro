@@ -214,7 +214,7 @@ const handleSend = async () => {
               </button>
             </div>
             <p className="text-[9px] text-center text-gray-400 mt-2 font-semibold uppercase tracking-widest">
-                OrderKaro Smart Assistant
+                Orderkaro Smart Assistant
             </p>
           </div>
         </div>

@@ -232,7 +232,7 @@ const handleTableNumberSubmit = () => {
             placeholder="Search for a dish..."
             value={searchTerm}
             onChange={e => setSearchTerm(e.target.value)}
-            className="w-full max-w-md px-4 py-2 rounded-xl text-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white shadow"
+            className="w-full max-w-md px-4 py-2 rounded-xl text-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 bg-white shadow"
           />
         </div>
       </header>
@@ -273,7 +273,7 @@ const handleTableNumberSubmit = () => {
               <span
                 key={idx}
                 className={`block w-2 h-2 rounded-full transition-all ${
-                  idx === activeOffer ? "bg-green-600" : "bg-gray-300"
+                  idx === activeOffer ? "bg-orange-600" : "bg-gray-300"
                 }`}
               />
             ))}
@@ -309,7 +309,7 @@ const handleTableNumberSubmit = () => {
                 key={cat}
                 onClick={() => setCategory(cat)}
                 className={`px-4 py-2 rounded-xl whitespace-nowrap ${
-                  category === cat ? "bg-green-500 text-white" : "bg-white text-gray-700 border"
+                  category === cat ? "bg-orange-500 text-white" : "bg-white text-gray-700 border"
                 }`}
               >
                 {cat}
@@ -321,7 +321,7 @@ const handleTableNumberSubmit = () => {
         <div className="flex flex-wrap justify-center">
           {loading ? (
             <div className="flex justify-center items-center w-full py-10">
-              <div className="w-10 h-10 border-4 border-green-500 border-t-transparent rounded-full animate-spin" />
+              <div className="w-10 h-10 border-4 border-orange-500 border-t-transparent rounded-full animate-spin" />
               <p className="ml-3 text-gray-500 text-sm">Loading menu...</p>
             </div>
           ) : filteredMenu.length > 0 ? (
@@ -352,7 +352,7 @@ const handleTableNumberSubmit = () => {
             Made with ❤️ by{" "}
             <a
               href="https://petoba.in"
-              className="text-green-500"
+              className="text-orange-500"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -367,7 +367,7 @@ const handleTableNumberSubmit = () => {
         <div className="fixed bottom-5 right-5">
           <button
             onClick={() => setShowCart(true)}
-            className="bg-green-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-green-600 transition-all"
+            className="bg-orange-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-orange-600 transition-all"
           >
              Cart ({cart.length})
           </button>
@@ -378,7 +378,7 @@ const handleTableNumberSubmit = () => {
       {showScrollTop && (
         <button
   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  className="fixed bottom-5 left-5 z-50 bg-green-500 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition-transform transform hover:-translate-y-1"
+  className="fixed bottom-5 left-5 z-50 bg-orange-500 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition-transform transform hover:-translate-y-1"
   aria-label="Scroll to top"
 >
   <svg
@@ -427,20 +427,20 @@ const handleTableNumberSubmit = () => {
           <div key={item._id} className="flex items-center justify-between group">
             <div className="flex-1">
               <p className="font-bold text-gray-800 text-lg">{item.name}</p>
-              <p className="text-green-600 font-medium">{currencySymbol}{item.price}</p>
+              <p className="text-orange-600 font-medium">{currencySymbol}{item.price}</p>
             </div>
             
-            <div className="flex items-center bg-green-50 rounded-xl p-1 border border-green-100">
+            <div className="flex items-center bg-orange-50 rounded-xl p-1 border border-orange-100">
               <button
                 onClick={() => updateQty(item._id, item.quantity - 1)}
-                className="w-8 h-8 flex items-center justify-center rounded-lg bg-white shadow-sm text-green-600 font-bold hover:bg-green-500 hover:text-white transition-all"
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-white shadow-sm text-orange-600 font-bold hover:bg-orange-500 hover:text-white transition-all"
               >
                 -
               </button>
               <span className="w-10 text-center font-bold text-gray-700">{item.quantity}</span>
               <button
                 onClick={() => updateQty(item._id, item.quantity + 1)}
-                className="w-8 h-8 flex items-center justify-center rounded-lg bg-white shadow-sm text-green-600 font-bold hover:bg-green-500 hover:text-white transition-all"
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-white shadow-sm text-orange-600 font-bold hover:bg-orange-500 hover:text-white transition-all"
               >
                 +
               </button>
@@ -465,7 +465,7 @@ const handleTableNumberSubmit = () => {
                 value={tableNumber}
                 onChange={(e) => setTableNumber(e.target.value)}
                 placeholder="Ex: 05"
-                className="w-full pl-8 pr-4 py-3 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-green-400 focus:outline-none transition-all font-bold text-lg"
+                className="w-full pl-8 pr-4 py-3 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-orange-400 focus:outline-none transition-all font-bold text-lg"
             />
         </div>
       </div>
@@ -485,7 +485,7 @@ const handleTableNumberSubmit = () => {
       ) : (
         <button
           onClick={handleTableNumberSubmit}
-          className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-2xl font-bold text-lg shadow-lg shadow-green-200 active:scale-[0.98] transition-all flex items-center justify-center gap-3"
+          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-4 rounded-2xl font-bold text-lg shadow-lg shadow-orange-200 active:scale-[0.98] transition-all flex items-center justify-center gap-3"
         >
           <span>Confirm Order via WhatsApp</span>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

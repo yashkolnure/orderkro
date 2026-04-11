@@ -278,7 +278,7 @@ function RestaurantMenuPagewp() {
   if (restaurantDetails?.orderMode === 'billing') {
     return (
       <div className="flex justify-center items-center h-screen bg-gray-100">
-        <div className="w-10 h-10 border-4 border-green-500 border-t-transparent rounded-full animate-spin" />
+        <div className="w-10 h-10 border-4 border-orange-500 border-t-transparent rounded-full animate-spin" />
         <p className="ml-3 text-gray-500 font-semibold">Redirecting to Billing Menu...</p>
       </div>
     );
@@ -296,7 +296,7 @@ function RestaurantMenuPagewp() {
             This restaurant is Disabled Connect to Orderkaro Team to Reactivate
             your Menu.
           </p>
-          <a href={`https://wa.me/919270361329?text=Reactivate%20Menu%20for%20Restaurant%20ID%3A%20${id}`} target="_blank" rel="noopener noreferrer" className="p-2 mt-4 border border-green-600 rounded-xl text-green-600 hover:underline font-semibold">
+          <a href={`https://wa.me/919270361329?text=Reactivate%20Menu%20for%20Restaurant%20ID%3A%20${id}`} target="_blank" rel="noopener noreferrer" className="p-2 mt-4 border border-orange-600 rounded-xl text-orange-600 hover:underline font-semibold">
             Contact Support
           </a>
           <p className="text-gray-400 text-sm mt-4">
@@ -356,7 +356,7 @@ function RestaurantMenuPagewp() {
             placeholder="Search for a dish..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full max-w-md px-4 py-2 rounded-xl text-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white shadow"
+            className="w-full max-w-md px-4 py-2 rounded-xl text-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 bg-white shadow"
           />
         </div>
       </header>
@@ -400,7 +400,7 @@ function RestaurantMenuPagewp() {
               <span
                 key={idx}
                 className={`block w-2 h-2 rounded-full transition-all ${
-                  idx === activeOffer ? "bg-green-600" : "bg-gray-300"
+                  idx === activeOffer ? "bg-orange-600" : "bg-gray-300"
                 }`}
               />
             ))}
@@ -437,7 +437,7 @@ function RestaurantMenuPagewp() {
                 onClick={() => setCategory(cat)}
                 className={`px-4 py-2 rounded-xl whitespace-nowrap ${
                   category === cat
-                    ? "bg-green-500 text-white"
+                    ? "bg-orange-500 text-white"
                     : "bg-white text-gray-700 border"
                 }`}
               >
@@ -477,7 +477,7 @@ function RestaurantMenuPagewp() {
             Made with ❤️ by{" "}
             <a
               href="https://orderkaro.live.in"
-              className="text-green-500"
+              className="text-orange-500"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -491,7 +491,7 @@ function RestaurantMenuPagewp() {
         <div className="fixed bottom-5 right-5">
           <button
             onClick={() => setShowCart(true)}
-            className="bg-green-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-green-600 transition-all"
+            className="bg-orange-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-orange-600 transition-all"
           >
             Cart ({cart.length})
           </button>
@@ -532,20 +532,20 @@ function RestaurantMenuPagewp() {
           <div key={item._id} className="flex items-center justify-between group">
             <div className="flex-1">
               <p className="font-bold text-gray-800 text-lg">{item.name}</p>
-              <p className="text-green-600 font-medium">{currencySymbol}{item.price}</p>
+              <p className="text-orange-600 font-medium">{currencySymbol}{item.price}</p>
             </div>
             
-            <div className="flex items-center bg-green-50 rounded-xl p-1 border border-green-100">
+            <div className="flex items-center bg-orange-50 rounded-xl p-1 border border-orange-100">
               <button
                 onClick={() => updateQty(item._id, item.quantity - 1)}
-                className="w-8 h-8 flex items-center justify-center rounded-lg bg-white shadow-sm text-green-600 font-bold hover:bg-green-500 hover:text-white transition-all"
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-white shadow-sm text-orange-600 font-bold hover:bg-orange-500 hover:text-white transition-all"
               >
                 -
               </button>
               <span className="w-10 text-center font-bold text-gray-700">{item.quantity}</span>
               <button
                 onClick={() => updateQty(item._id, item.quantity + 1)}
-                className="w-8 h-8 flex items-center justify-center rounded-lg bg-white shadow-sm text-green-600 font-bold hover:bg-green-500 hover:text-white transition-all"
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-white shadow-sm text-orange-600 font-bold hover:bg-orange-500 hover:text-white transition-all"
               >
                 +
               </button>
@@ -570,7 +570,7 @@ function RestaurantMenuPagewp() {
                 value={tableNumber}
                 onChange={(e) => setTableNumber(e.target.value)}
                 placeholder="Ex: 05"
-                className="w-full pl-8 pr-4 py-3 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-green-400 focus:outline-none transition-all font-bold text-lg"
+                className="w-full pl-8 pr-4 py-3 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-orange-400 focus:outline-none transition-all font-bold text-lg"
             />
         </div>
       </div>
@@ -590,7 +590,7 @@ function RestaurantMenuPagewp() {
       ) : (
         <button
           onClick={handleTableNumberSubmit}
-          className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-2xl font-bold text-lg shadow-lg shadow-green-200 active:scale-[0.98] transition-all flex items-center justify-center gap-3"
+          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-4 rounded-2xl font-bold text-lg shadow-lg shadow-orange-200 active:scale-[0.98] transition-all flex items-center justify-center gap-3"
         >
           <span>Confirm Order via WhatsApp</span>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

@@ -68,7 +68,7 @@ function RestaurantMenuPagewp() {
 
 useEffect(() => {
   // Add optional chaining (?.) to prevent reading from null
-  if (restaurantDetails?.billing === 'true' && restaurantDetails?.orderMode === 'billing') {
+  if (restaurantDetails?.billing === true && restaurantDetails?.orderMode === 'billing') {
     navigate(`/restaurant/${id}${location.search}`, { replace: true });
   }
 }, [restaurantDetails, navigate, location.search, id]);

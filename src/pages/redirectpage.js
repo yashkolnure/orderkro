@@ -86,7 +86,7 @@ function RedirectManagerPage() {
           onChange={(e) => setTo(e.target.value)}
         />
         <button
-          className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded"
+          className="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded"
           onClick={handleAddRedirect}
         >
           Add Redirect

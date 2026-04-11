@@ -165,7 +165,7 @@ const handleSend = async () => {
                 <div 
                   className={`max-w-[85%] p-3 rounded-2xl text-sm leading-relaxed shadow-sm whitespace-pre-wrap ${
                     msg.role === "user" 
-                      ? "bg-orange-500 text-white rounded-tr-none" 
+                      ? "bg-green-500 text-white rounded-tr-none" 
                       : "bg-white border border-gray-200 text-gray-800 rounded-tl-none"
                   }`}
                 >
@@ -178,9 +178,9 @@ const handleSend = async () => {
               <div className="flex justify-start">
                 <div className="bg-white border border-gray-200 px-4 py-3 rounded-2xl rounded-tl-none flex items-center space-x-1">
                     <div className="flex space-x-1">
-                        <div className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-bounce"></div>
-                        <div className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-bounce [animation-delay:-.3s]"></div>
-                        <div className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-bounce [animation-delay:-.5s]"></div>
+                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce"></div>
+                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce [animation-delay:-.3s]"></div>
+                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce [animation-delay:-.5s]"></div>
                     </div>
                 </div>
               </div>
@@ -190,7 +190,7 @@ const handleSend = async () => {
 
           {/* Input Area */}
           <div className="p-3 bg-white border-t border-gray-100">
-            <div className="flex items-center bg-gray-100 rounded-2xl px-2 py-1 focus-within:ring-2 focus-within:ring-orange-100 transition-all">
+            <div className="flex items-center bg-gray-100 rounded-2xl px-2 py-1 focus-within:ring-2 focus-within:ring-green-100 transition-all">
               <input
                 type="text"
                 placeholder="Type a message..." 
@@ -204,7 +204,7 @@ const handleSend = async () => {
                 disabled={loading || !input.trim()}
                 className={`p-2 rounded-xl transition-all ${
                   input.trim() 
-                    ? "bg-orange-500 text-white shadow-md hover:bg-orange-600" 
+                    ? "bg-green-500 text-white shadow-md hover:bg-green-600" 
                     : "bg-gray-200 text-gray-400"
                 }`}
               >
@@ -214,7 +214,7 @@ const handleSend = async () => {
               </button>
             </div>
             <p className="text-[9px] text-center text-gray-400 mt-2 font-semibold uppercase tracking-widest">
-                Petoba Smart Assistant
+                OrderKaro Smart Assistant
             </p>
           </div>
         </div>

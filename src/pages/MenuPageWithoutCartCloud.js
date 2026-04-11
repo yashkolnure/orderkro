@@ -292,7 +292,7 @@ function RestaurantMenuPageCloud() {
         <img src="https://t3.ftcdn.net/jpg/02/97/67/70/360_F_297677001_zX7ZzRq8DObUV5IWTHAIhAae6DuiEQh4.jpg" className="absolute inset-0 w-full h-full object-cover" alt="bg" />
         <div className="relative z-10 bg-black/40 h-full flex flex-col items-center justify-center px-4 py-6 gap-4">
           {restaurantDetails?.logo && <img src={restaurantDetails.logo} alt="Logo" className="h-20 object-contain" />}
-          <input type="text" placeholder="Search dish..." value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="w-full max-w-md px-4 py-2 rounded-xl text-lg focus:outline-none focus:ring-2 focus:ring-orange-400 bg-white shadow" />
+          <input type="text" placeholder="Search dish..." value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="w-full max-w-md px-4 py-2 rounded-xl text-lg focus:outline-none focus:ring-2 focus:ring-green-400 bg-white shadow" />
         </div>
       </header>
 
@@ -303,7 +303,7 @@ function RestaurantMenuPageCloud() {
             {offers.map(o => <img key={o._id} src={o.image} className="w-4/5 flex-shrink-0 snap-start h-[150px] object-cover rounded-lg" alt="offer" />)}
           </div>
           <div className="flex justify-center gap-2 py-4">
-            {offers.map((_, i) => <span key={i} className={`w-2 h-2 rounded-full transition-all ${i === activeOffer ? "bg-orange-600" : "bg-gray-300"}`} />)}
+            {offers.map((_, i) => <span key={i} className={`w-2 h-2 rounded-full transition-all ${i === activeOffer ? "bg-green-600" : "bg-gray-300"}`} />)}
           </div>
         </div>
       )}
@@ -314,7 +314,7 @@ function RestaurantMenuPageCloud() {
         <div className="overflow-x-auto mb-4 hide-scrollbar">
           <div className="flex gap-2 w-max px-2">
             {categories.map(cat => (
-              <button key={cat} onClick={() => setCategory(cat)} className={`px-4 py-2 rounded-xl whitespace-nowrap border ${category === cat ? "bg-orange-500 text-white border-orange-500" : "bg-white text-gray-700 border-gray-200"}`}>{cat}</button>
+              <button key={cat} onClick={() => setCategory(cat)} className={`px-4 py-2 rounded-xl whitespace-nowrap border ${category === cat ? "bg-green-500 text-white border-green-500" : "bg-white text-gray-700 border-gray-200"}`}>{cat}</button>
             ))}
           </div>
         </div>
@@ -335,7 +335,7 @@ function RestaurantMenuPageCloud() {
             Made with ❤️ by{" "}
             <a
               href="https://petoba.in"
-              className="text-orange-500"
+              className="text-green-500"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -350,7 +350,7 @@ function RestaurantMenuPageCloud() {
       
         <button onClick={() => setShowTrackModal(true)} className="fixed bottom-5 left-24 bg-white text-gray-800 px-4 py-4 rounded-full shadow-lg font-bold border flex items-center gap-2 z-40">Track</button>
       
-      <button onClick={() => setShowCart(true)} className="fixed bottom-5 right-5 bg-orange-500 text-white px-6 py-3 rounded-full shadow-lg font-bold flex items-center gap-2 z-40">
+      <button onClick={() => setShowCart(true)} className="fixed bottom-5 right-5 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg font-bold flex items-center gap-2 z-40">
         View Cart {cart.length > 0 && `(${cart.length})`}
       </button>
 
@@ -362,8 +362,8 @@ function RestaurantMenuPageCloud() {
           <div className="bg-white rounded-2xl shadow-xl w-full max-w-sm p-5 flex flex-col max-h-[80vh]">
             <div className="flex justify-between items-center mb-4"><h2 className="font-bold text-lg">My Orders</h2><button onClick={() => setShowTrackModal(false)} className="text-gray-400 text-xl">✕</button></div>
             <div className="flex gap-2 mb-4">
-              <input type="tel" placeholder="Phone Number" value={trackPhone} onChange={e => setTrackPhone(e.target.value)} className="flex-1 px-3 py-2 border rounded-xl bg-gray-50 outline-none focus:ring-2 focus:ring-orange-500"/>
-              <button onClick={handleTrackOrder} disabled={trackLoading} className="bg-orange-500 text-white px-4 rounded-xl font-bold disabled:opacity-50">{trackLoading ? "..." : "Find"}</button>
+              <input type="tel" placeholder="Phone Number" value={trackPhone} onChange={e => setTrackPhone(e.target.value)} className="flex-1 px-3 py-2 border rounded-xl bg-gray-50 outline-none focus:ring-2 focus:ring-green-500"/>
+              <button onClick={handleTrackOrder} disabled={trackLoading} className="bg-green-500 text-white px-4 rounded-xl font-bold disabled:opacity-50">{trackLoading ? "..." : "Find"}</button>
             </div>
             <div className="overflow-y-auto flex-1 space-y-3 custom-scrollbar">
               {trackedOrders.length === 0 ? <p className="text-center text-gray-400 text-sm">Enter number to see history</p> : 
@@ -413,7 +413,7 @@ function RestaurantMenuPageCloud() {
           <div key={item._id} className="flex items-center justify-between">
             <div className="flex-1 pr-4">
               <h4 className="font-bold text-gray-800">{item.name}</h4>
-              <p className="text-orange-600 font-bold text-sm">₹{item.price}</p>
+              <p className="text-green-600 font-bold text-sm">₹{item.price}</p>
             </div>
             
             <div className="flex items-center bg-gray-100 rounded-xl p-1 border border-gray-200">
@@ -438,7 +438,7 @@ function RestaurantMenuPageCloud() {
           </button>
           <button 
             onClick={() => { setShowCart(false); setShowModal(true); }}
-            className="flex-[2] py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-2xl font-black text-lg shadow-lg shadow-orange-200 active:scale-95 transition-all"
+            className="flex-[2] py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-2xl font-black text-lg shadow-lg shadow-green-200 active:scale-95 transition-all"
           >
             Checkout
           </button>
@@ -469,7 +469,7 @@ function RestaurantMenuPageCloud() {
             </div>
             <div className="flex gap-3 mt-6">
               <button onClick={() => setShowModal(false)} className="flex-1 py-3 bg-gray-200 rounded-xl font-bold">Cancel</button>
-              <button onClick={handlePlaceOrder} className="flex-1 py-3 bg-orange-500 text-white rounded-xl font-bold">
+              <button onClick={handlePlaceOrder} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-bold">
                 {restaurantDetails?.orderMode === 'billing' ? "Place Order" : "Send on WhatsApp"}
               </button>
             </div>

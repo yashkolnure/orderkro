@@ -272,7 +272,7 @@ useEffect(() => {
   };
 
   // 4. PREVENT FLASHING: If orderMode is 'billing', return null (or a spinner) while redirecting
-  if (restaurantDetails?.billing === 'true' && restaurantDetails?.orderMode === 'billing') {
+  if (restaurantDetails?.billing === true && restaurantDetails?.orderMode === 'billing') {
     return (
       <div className="flex justify-center items-center h-screen bg-gray-100">
         <div className="w-10 h-10 border-4 border-orange-500 border-t-transparent rounded-full animate-spin" />

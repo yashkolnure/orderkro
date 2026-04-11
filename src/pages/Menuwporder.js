@@ -69,7 +69,7 @@ function RestaurantMenuPagewp() {
   // This runs whenever restaurantDetails updates.
   useEffect(() => {
     // Check if restaurant details are loaded and if orderMode is 'billing'
-    if (restaurantDetails.billing === 'true' && restaurantDetails.orderMode === 'billing') {
+    if (restaurantDetails?.billing === 'true' && restaurantDetails?.orderMode === 'billing') {
       // Use replace: true so the user can't click 'back' to return to the redirecting page
       // Ensure the billing app route is correct. Assuming it's /restaurant/:id based on previous context.
       navigate(`/restaurant/${id}${location.search}`, { replace: true });

@@ -100,11 +100,11 @@ const customStyles = `
     border: 1px solid rgba(255, 255, 255, 0.6);
   }
   
-  .gradient-text {
-    background: linear-gradient(to right, #f97316, #db2777);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+.gradient-text {
+  background: linear-gradient(to right, #16a34a, #059669);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 `;
 
 // Helper for Scroll Animation
@@ -250,9 +250,9 @@ const HomePage = () => {
         {/* Headline */}
         <h1 className="text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6">
           The All-in-One <br/>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-pink-600">
-            Restaurant OS.
-          </span>
+<span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">
+  Restaurant OS.
+</span>
         </h1>
 
         {/* Subtext */}
@@ -670,7 +670,7 @@ const HomePage = () => {
 
                     <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-6">
                       QR Menu + <br/>
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-600">Full Billing Software</span>
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">Full Billing Software</span>
                     </h2>
                     
                     <p className="text-lg text-slate-600 mb-8 leading-relaxed">
@@ -750,9 +750,9 @@ const HomePage = () => {
             {/* Headline */}
             <h2 className="text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight text-slate-900">
               Meet Your <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-pink-600 to-purple-600">
-                AI Waiter.
-              </span>
+<span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-emerald-600 to-teal-600">
+  AI Waiter.
+</span>
             </h2>
 
             {/* Price Strike-through & Reveal */}
@@ -955,7 +955,7 @@ const HomePage = () => {
             <span className="text-orange-600 font-bold tracking-wider uppercase text-sm bg-orange-100 px-4 py-1 rounded-full">Simple Process</span>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-4 mb-4">
               From PDF to QR <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-600">in 5 Minutes</span>
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600">in 5 Minutes</span>
             </h2>
             <p className="text-slate-500 text-lg max-w-xl mx-auto">
               No technical skills needed. Our AI handles the boring data entry work for you.
@@ -1236,7 +1236,7 @@ const HomePage = () => {
 
       {/* --- CTA BOTTOM --- */}
       <section className="py-10 px-6 mb-20">
-        <div className="max-w-5xl mx-auto bg-gradient-to-r from-orange-500 to-pink-600 rounded-[3rem] p-10 md:p-16 text-center text-white shadow-2xl relative overflow-hidden">
+        <div className="max-w-5xl mx-auto bg-gradient-to-r from-green-600 to-emerald-700  rounded-[3rem] p-10 md:p-16 text-center text-white shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
           
           <h2 className="relative z-10 text-4xl md:text-5xl font-bold mb-6">Ready to upgrade your restaurant?</h2>

@@ -45,7 +45,7 @@ const QRCodeTemplates = ({ restaurantId, membership_level }) => {
       id: "template1",
       title: "Dine-In Menu QR",
       desc: "Standard QR for table ordering",
-      img: "https://website.avenirya.com/wp-content/uploads/2025/11/Orange-and-White-Retro-QR-Code-Placement-Flyer.jpg",
+      img: "https://i.ibb.co/b5tcjkx9/Made-by-Order-Karo-1.png",
       qrStyle: { top: "55%", left: "50%", width: "46%", transform: "translate(-50%, -50%)" },
     },
     {

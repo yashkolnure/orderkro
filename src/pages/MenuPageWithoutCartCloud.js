@@ -334,12 +334,12 @@ function RestaurantMenuPageCloud() {
           <p className="text-gray-500 text-center mt-4 mb-24">
             Made with ❤️ by{" "}
             <a
-              href="https://petoba.in"
+              href="https://orderkaro.live"
               className="text-orange-500"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Petoba
+              OrderKaro
             </a>
           </p>
         </div>

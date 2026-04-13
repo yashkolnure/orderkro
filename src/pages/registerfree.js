@@ -12,7 +12,7 @@ const RegisterFreePage = () => {
   const [searchParams] = useSearchParams();
   
   // ✅ CONFIG: Support Number (Replace this with your actual number)
-  const SUPPORT_NUMBER = "919270361329"; 
+  const SUPPORT_NUMBER = "916306869031"; 
 
   // ✅ 1. Get Plan, Cycle & Coupon from URL
   const selectedPlan = (searchParams.get("plan") || "trial").toLowerCase();
@@ -483,7 +483,7 @@ const RegisterFreePage = () => {
                <div className="bg-orange-50 p-2 rounded-full text-orange-600"><PhoneCall size={20}/></div>
                <div>
                   <p className="text-xs font-bold text-orange-800 uppercase">Having trouble?</p>
-                  <p className="text-sm font-semibold text-gray-700">Call or WhatsApp us at <a href={`https://wa.me/${SUPPORT_NUMBER}`} className="underline hover:text-orange-600">92703 61329</a></p>
+                  <p className="text-sm font-semibold text-gray-700">Call or WhatsApp us at <a href={`https://wa.me/${SUPPORT_NUMBER}`} className="underline hover:text-orange-600"> 6306869031</a></p>
                </div>
             </div>
 

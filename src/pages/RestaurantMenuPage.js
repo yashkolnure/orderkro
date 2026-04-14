@@ -605,7 +605,7 @@ function RestaurantMenuPage() {
               type="text"
               value={tableNumber}
               onChange={(e) => setTableNumber(e.target.value)}
-              placeholder="e.g., 5"
+              placeholder="Table No. Or Room No.*"
               // Disable editing if it came from the URL (optional)
               disabled={!!tableFromURL} 
               className={`w-full px-4 py-3 border border-gray-300 rounded-xl text-lg focus:outline-none focus:ring-2 focus:ring-orange-500 mb-6 ${

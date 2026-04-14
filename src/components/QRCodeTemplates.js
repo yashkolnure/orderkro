@@ -67,7 +67,7 @@ const QRCodeTemplates = ({ restaurantId, membership_level }) => {
     setDownloading(true);
     setProgress(0);
     const zip = new JSZip();
-    const folder = zip.folder(`Petoba_QR_Codes_${restaurantId}`);
+    const folder = zip.folder(`OrderKaro_QR_Codes_${restaurantId}`);
 
     try {
       for (let i = 1; i <= tableCount; i++) {

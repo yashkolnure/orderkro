@@ -80,7 +80,7 @@ const QRCodeTemplates = ({ restaurantId, membership_level }) => {
         setProgress(Math.round((i / tableCount) * 100));
       }
       const content = await zip.generateAsync({ type: "blob" });
-      saveAs(content, `Petoba_Tables_1-${tableCount}.zip`);
+      saveAs(content, `OrderKaro_Tables_1-${tableCount}.zip`);
     } catch (error) {
       console.error(error);
       alert("Error generating zip.");
